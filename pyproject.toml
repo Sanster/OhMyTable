@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=57.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# Project settings -----------------------------------------------------------------------------------------------------
+[project]
+name = "ohmytable"
+dynamic = ["version"]
+description = ""
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["deep-learning", "table-structure-recognition"]
+authors = [
+    { name = "Sanster" },
+]
+maintainers = [
+    { name = "Sanster" },
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+]
+
+# Required dependencies ------------------------------------------------------------------------------------------------
+dependencies = [
+    "numpy>=1.23.0,<2.0.0",
+    "opencv-python>=4.6.0",
+    "torch>=1.8.0",
+    "torchvision>=0.9.0",
+    "ultralytics",
+    "loguru",
+    "huggingface-hub",
+    "tokenizers",
+    "shapely",
+    "pyclipper"
+]
+
+[project.urls]
+"Bug Reports" = "https://github.com/Sanster/ohmytable/issues"
+"Source" = "https://github.com/Sanster/ohmytable/"
+
+# Tools settings -------------------------------------------------------------------------------------------------------
+[tool.setuptools]  # configuration specific to the `setuptools` build backend.
+packages = { find = { where = ["."], include = ["ohmytable", "ohmytable.*"] } }
+
+[tool.setuptools.dynamic]
+version = { attr = "ohmytable.__version__" }
+
+[tool.ruff]
+line-length = 120
