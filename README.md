@@ -39,7 +39,8 @@ python3 gradio_demo.py
 ## Limitation
 
 - Table Structure Recognition model is trained with max output length 1024(about 150 table cell boxes.)
-- The model effect will be better with less padding around the table image.
+- The current table recognition model's training data contains a lot of dirty data. I may train a new model after cleaning the data.
+- The model works better with less padding around the table image.
 
 ## Acknowledgement
 
