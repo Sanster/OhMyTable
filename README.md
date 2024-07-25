@@ -1,6 +1,6 @@
 # OhMyTable
 
-![example](./assets/example.jpg)
+![example](https://raw.githubusercontent.com/Sanster/OhMyTable/main/assets/example.jpg)
 
 ## Install
 
